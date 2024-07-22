@@ -1,8 +1,8 @@
 import json
 from typing import Any
 
-import requests
 import psycopg2
+import requests
 
 
 def get_companies():
