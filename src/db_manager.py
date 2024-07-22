@@ -59,7 +59,7 @@ class DBManager:
         """
         self.cursor.execute("""
             SELECT * FROM vacancies 
-            WHERE vacancy_name ILIKE '%%' || %s || '%%';
+            WHERE vacancy_name LIKE '%%' || %s || '%%';
         """, (keyword,))  # '%%' означает любую последовательность символов перед и после ключевого слова (%s)
         return self.cursor.fetchall()
 
